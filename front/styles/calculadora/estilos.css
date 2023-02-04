@@ -1,0 +1,106 @@
+.container {
+  background: black;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 30px);
+  grid-template-rows: repeat(5, 30px);
+}
+.container-numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 30px);
+  grid-template-rows: repeat(4, 30px);
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.button-delete {
+  grid-column: 1 / 1;
+  grid-row: 4 / 4;
+}
+
+.button-decimal {
+  grid-column: 3 / 3;
+  grid-row: 4 / 4;
+}
+
+.button0 {
+  grid-column: 2 / 2;
+}
+
+.buttonSuma {
+  grid-column: 4/4;
+  grid-row: 1/1;
+}
+
+.display {
+  background: orange;
+  width: 127px;
+  height: 30px;
+}
+
+.button {
+  height: 20px;
+  background-color: orange;
+  cursor: pointer;
+}
+
+.buttonResta {
+  grid-column: 4/4;
+  grid-row: 4/2;
+}
+.buttonMultiplicacion {
+  grid-column: 4/4;
+  grid-row: 4/3;
+}
+.buttonDividir {
+  grid-column: 4/4;
+  grid-row: 4/4;
+}
+.buttonPorcentaje {
+  grid-column: 3 / span 4;
+  grid-row: 5/5;
+}
+.buttonIgual{
+  grid-column: 1 / span 2 ;
+}
+/* 
+.button1 {
+  margin-top: 25px;
+  width: 30px;
+  background-color: orange;
+  cursor: pointer;
+}
+.button2 {
+  display: flex;
+  width: 50px;
+  background-color: orange;
+  cursor: pointer;
+  position: relative;
+  left: 48px;
+  bottom: 100px;
+}
+
+
+.button4 {
+  display: flex;
+  background: #ffa500;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  left: 97px;
+  bottom: 80px;
+  align-items: center;
+}
+.button-0 {
+  width: 48px;
+  height: 20px;
+  background-color: orange;
+  cursor: pointer;
+} */

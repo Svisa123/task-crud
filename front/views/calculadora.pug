@@ -1,0 +1,30 @@
+extends ../template/template
+
+block main
+  style
+    include ../styles/calculadora/estilos.css 
+  div(class="container" id="container")
+    div(class="display" id="display") 
+    div(class="container-buttons")
+      div(class="container-numbers")
+        -var i = 9
+        while i > -1
+          button(class=`button button${i}` id=`button${i}`)= i
+          -i--
+      button(class="button button-delete" id="buttonDelete") AC
+      button(class="button button-decimal " id="buttonDecimal") .
+      button(class="button buttonSuma" id="buttonSuma") +
+      button(class="button buttonResta"  id="buttonResta") - 
+      button(class="button buttonMultiplicacion" id="buttonMultiplicacion") x
+      button(class="button buttonDividir" id="buttonDividir") /
+      button(class="button buttonPorcentaje" id="buttonPorcentaje") % 
+      button(class="button buttonIgual" id="buttonIgual") = 
+
+  script
+    include ../js/calculadora/detectOperation.js   
+  script
+    include ../js/calculadora/insertNumber.js      
+  script
+    include ../js/calculadora/handler.js    
+  
+

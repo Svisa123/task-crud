@@ -1,0 +1,32 @@
+style 
+  include ../styles/auth/style.css
+div(class="main-container")
+
+  form(class="form-container" action="/signin" method="POST")
+    img(src="/auth/logo.svg" alt="logo" class="logo")
+    h1(class="title") Account login
+    -var [signinMessage] = flash
+    if(signupMessage)
+      div(class="container-error-auth") #{signinMessage.message}
+    div(class="logo-input")
+      img(src="/auth/user_1.svg" alt="")
+      input(id="user"
+            type="text"
+            name="email"
+            autocomplete="off"
+            class="text-input"
+            placeholder="Username Or Email address")
+    div(class="logo-input")
+      img(src="/auth/padlock_1.svg" alt="")
+      input( class="text-input-1"
+             name="password"
+             id="password"
+             type="password"
+             placeholder="Password")
+    button(class="btn-login" type="submit") Login
+    p(class="sing-up")
+      span Dont't have an account ?
+      a(href="/" class="register") #{" "} Sing up  
+
+script
+  include ../js/validaterForm/index.js

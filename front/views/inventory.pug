@@ -1,0 +1,57 @@
+extends ../template/template
+
+block main
+ 
+  style
+    include ../styles/inventory/inventory.css 
+  form(class="container-inventory" method="POST" action="/inventory")
+    h1(class="title") Inventario     
+    div(class="container-manager")
+      div(class="frame-table-inventory" )  
+        table(class="table-inventory") 
+          thead(class="table-header")   
+            tr
+              th ARTICULO 
+              th CANTIDAD
+              th PRECIO$
+              th PRECIO BS
+              th TOTAL
+              th 
+          tbody(id="body-table") 
+            tr
+              td
+                input(type="text" name="articles") 
+              td 
+                input(type="text" name="amounts")
+              td 
+                input(type="text" name="pricesDollar") 
+              td 
+                input(type="text" name="pricesBs") 
+              td  
+                input(type="text" name="totals")     
+              td 
+           
+      button(class="btn-add" id="btn-add" type="button") AGREGAR ARTICULO
+      button(class="btn-add" type="submit" id="btn-save") GUARDAR VENTA     
+      script
+        include ../js/inventory/addButton.js
+              
+                      
+
+
+
+
+
+
+
+//- <div class="container">
+//-   <img  class="img" src="https://cdn.shopify.com/s/files/1/0405/7065/0788/files/logo_welcome.svg_72f96623-3169-48db-b78e-27f4ebc1b6db.png?v=1615208283" alt="">
+//-   <a class="link" href="">home</a>
+//-   <a class="link" href="">inventario</a>
+//-   <a class="link" href="">calculadora</a>
+
+//- </div>
+//- <div class="container-1">
+//-   <img  class="img-1" src="https://media.istockphoto.com/id/1302839569/es/vector/bienvenido-al-icono-del-logotipo-de-letras-dibujado-a-mano-por-el-equipo-en-colores-gris.jpg?s=612x612&w=0&k=20&c=upLfmoMCqqHfUzN-VzZ-bzaM5IYs-WbplSVPbR5Lt1A=" alt="">
+//- </div>
+//- //-  
